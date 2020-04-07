@@ -1,4 +1,5 @@
 require('./config/config');
+
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.use(require('./rutas/usuario'));
+app.use(require('./rutas/index'));
 
 //mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
 //mongoose.connect('mongodb://localhost:27017/cafe', { useNewUrlParser: true }, (err, res) => {

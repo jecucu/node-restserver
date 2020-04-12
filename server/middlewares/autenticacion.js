@@ -22,10 +22,7 @@ let verificaToken = (req, res, next) => {
 let verificaUsuario = (req, res, next) => {
 
     let usuario = req.usuario;
-    console.log(usuario)
-    console.log('***TRAZA 1 ***')
     if (usuario.role != 'ADMIN_ROLE') {
-        console.log('***TRAZA 2 ***')
         return res.status(401).json({
             ok: false,
             err: {
@@ -33,7 +30,6 @@ let verificaUsuario = (req, res, next) => {
             }
         })
     }
-    console.log('***TRAZA 3 ***')
     next();
 
 }

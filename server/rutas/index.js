@@ -4,5 +4,7 @@ let app = express();
 
 app.use(require('./usuario'));
 app.use(require('./login'));
+app.use(require('./categorias'));
+app.use(require('./productos'));
 
 module.exports = app;
